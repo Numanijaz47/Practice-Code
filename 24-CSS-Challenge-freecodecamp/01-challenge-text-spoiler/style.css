@@ -31,3 +31,7 @@ p {
     background: initial;
     color: initial;
 }
+
+.spoiler-h1 {
+    font-size: min(1rem, 10px);
+}
