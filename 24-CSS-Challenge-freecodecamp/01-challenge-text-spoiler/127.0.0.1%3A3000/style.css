@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 10px;
+}
+
+
+:root {
+    --spoiler-color: #000;
+}
+
+p {
+    line-height: 1.5rem;
+    font-size: 5rem;
+}
+
+.post {
+    background: #d2d5db;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    width: max(10rem, 250px);
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.spoiler {
+    background: var(--spoiler-color);
+    color: var(--spoiler-color);
+    transition: all .5s ease-in;
+}
+
+.spoiler:hover {
+    background: yellow;
+    color: red;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+    cursor: default;
+}
