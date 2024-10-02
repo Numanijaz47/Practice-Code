@@ -52,6 +52,7 @@ p {
     background-color: var(--spoiler-text-color);
     color: var(--spoiler-text-color);
     transition: all .5s ease-in;
+    user-select: none;
 }
 
 .spoiler:hover {
