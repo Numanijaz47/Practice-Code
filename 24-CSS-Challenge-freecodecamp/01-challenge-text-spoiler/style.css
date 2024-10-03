@@ -25,6 +25,7 @@ body {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
+    align-content:center;
 }
 
 .nav a{
