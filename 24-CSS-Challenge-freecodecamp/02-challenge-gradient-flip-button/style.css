@@ -4,6 +4,7 @@
     background-position: left; /* Initial position */
     padding: 12px;
     transition: background-position 3s ease;
+    border-radius: 10px;
 }
 
 .background-in:hover{
