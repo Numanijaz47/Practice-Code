@@ -1,0 +1,49 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --search-border: #bbb;
+    --search-focus-border: #3a71ca;
+}
+
+
+.container{
+    padding: 2em;
+    width: 80%;
+    margin: auto;
+    min-width: 320px;
+}
+
+.search-bar {
+    width: 30%;
+    line-height: 2;
+    border-radius: 5px;
+    border: 1px solid var(--search-border);
+    transition: all .3s;
+
+    &:focus{
+        width: 100%;
+        border-color: var(--search-focus-border);
+    }
+}
+
+.hide{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
+}
+
+.search-bar::placeholder{
+    font-weight: 200;
+}
+
+.search-bar:focus::placeholder{
+    color: transparent;
+}
