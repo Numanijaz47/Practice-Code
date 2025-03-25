@@ -3,47 +3,48 @@ html, body{
     padding: 0;
 }
 
-:root{
+:root {
     --search-border: #bbb;
-    --search-focus-border: #3a71ca;
+    --search-focus-border: #3a7;
 }
 
-
-.container{
+.container {
     padding: 2em;
+    border: 1px solid black;
     width: 80%;
     margin: auto;
     min-width: 320px;
 }
 
-.search-bar {
+.search-bar{
     width: 30%;
     line-height: 2;
     border-radius: 5px;
-    border: 1px solid var(--search-border);
-    transition: all .3s;
+    border: 1px solid var(--search-focus-border);
+    transition: all 0.3s linear;
 
-    &:focus{
+
+    &:focus {
         width: 100%;
         border-color: var(--search-focus-border);
     }
+
+    &::placeholder {
+        font-weight: 200;
+    }
+
+    &:focus::placeholder {
+        color:transparent;
+    }
 }
 
-.hide{
+.hide {
     position: absolute;
-    width: 1px;
-    height: 1px;
+    width: 0px;
+    height: 0px;
     padding: 0;
     margin: -1px;
     overflow: hidden;
     white-space: nowrap;
     border: 0;
-}
-
-.search-bar::placeholder{
-    font-weight: 200;
-}
-
-.search-bar:focus::placeholder{
-    color: transparent;
 }
