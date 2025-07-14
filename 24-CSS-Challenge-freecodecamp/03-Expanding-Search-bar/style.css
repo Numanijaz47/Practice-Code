@@ -3,48 +3,51 @@ html, body{
     padding: 0;
 }
 
-:root {
+:root{
     --search-border: #bbb;
-    --search-focus-border: #3a7;
+    --search-focus-border: blue;
 }
 
-.container {
-    padding: 2em;
-    border: 1px solid black;
-    width: 80%;
-    margin: auto;
-    min-width: 320px;
-}
-
-.search-bar{
-    width: 30%;
-    line-height: 2;
-    border-radius: 5px;
-    border: 1px solid var(--search-focus-border);
-    transition: all 0.3s linear;
-
-
-    &:focus {
-        width: 100%;
-        border-color: var(--search-focus-border);
-    }
-
-    &::placeholder {
-        font-weight: 200;
-    }
-
-    &:focus::placeholder {
-        color:transparent;
-    }
-}
-
-.hide {
+.sr-only {
     position: absolute;
-    width: 0px;
-    height: 0px;
+    width: 1px;
+    height: 1px;
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    white-space: nowrap;
+    clip: rect(0, 0, 0, 0);
     border: 0;
+}
+
+.container{
+    /* background-color: blueviolet; */
+    height: 90px;
+    width: 95vw;
+    min-width: 320px;
+    max-width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.search-bar{
+    width: 32vw;
+    line-height: 2;
+    border-radius: 10px;
+    border:1px solid var(--search-border);
+    margin-left: 10px;
+    transition: all 0.3s;    
+}
+.search-bar:focus{
+    width: 100%;
+    border-color: var(--search-focus-border);
+}
+
+.search-bar::placeholder{
+    font-weight: 200;
+}
+
+.search-bar:focus::placeholder{
+    color: transparent;
 }
